@@ -1,9 +1,13 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from django.http import JsonResponse
 from .models import Projetos
 from .serializers import ProjetosSerializer
 
 # Create your views here.
+
+def api_status(request):
+  return JsonResponse({"message": "API running"})
 
 class ProjetosAPIView(APIView):
   def get(self, request):
