@@ -148,9 +148,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Cloudinary Configurations
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dl0l1ptyi',
-    'API_KEY': '199493923236982',
-    'API_SECRET': 'h55Oukkj-Y_D10gtIt35U450H8I'
+    'CLOUD_NAME': 'CLOUD_NAME',
+    'API_KEY': 'API_KEY',
+    'API_SECRET': 'API_SECRET'
 }
 
 # Definir o armazenamento de mídia
