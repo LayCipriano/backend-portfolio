@@ -5,7 +5,7 @@ from django.db import models
 class Projetos(models.Model):
   title = models.CharField(max_length=200) 
   description = models.TextField()
-  linkProject = models.CharField(max_length=200)
+  linkProject = models.CharField(max_length=200, blank=True)
   linkRepo = models.CharField(max_length=200)
   image = models.ImageField(upload_to='imagens/')
   
