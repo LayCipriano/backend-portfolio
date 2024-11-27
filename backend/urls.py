@@ -23,4 +23,7 @@ from gerenciador.views import ProjetosAPIView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/projects', ProjetosAPIView.as_view(), name='api-projetos')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
