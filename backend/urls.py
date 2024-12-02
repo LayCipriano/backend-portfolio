@@ -19,7 +19,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from gerenciador.views import ProjetosAPIView
-from gerenciador.api_status import api_status
+from gerenciador.views import api_status
 
 urlpatterns = [
     path('', api_status, name='api_status'),

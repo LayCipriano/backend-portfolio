@@ -83,24 +83,24 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3', # Padrão SQLite para desenvolvimento
-    }
-}
-
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.environ.get("NAME"),             # Nome do banco
-#         'USER': os.environ.get("USER"),             # Usuário do banco
-#         'PASSWORD': os.environ.get("PASSWORD"),     # Senha
-#         'HOST': os.environ.get("HOST"),             # Host do banco (IP ou domínio)
-#         'PORT': '5432',                             # Porta do banco
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3', # Padrão SQLite para desenvolvimento
 #     }
 # }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get("NAME"),             # Nome do banco
+        'USER': os.environ.get("USER"),             # Usuário do banco
+        'PASSWORD': os.environ.get("PASSWORD"),     # Senha
+        'HOST': os.environ.get("HOST"),             # Host do banco (IP ou domínio)
+        'PORT': '5432',                             # Porta do banco
+    }
+}
 
 
 # Obtém a URL do banco de dados a partir da variável de ambiente
