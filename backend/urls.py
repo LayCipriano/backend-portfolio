@@ -19,10 +19,10 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from gerenciador.views import ProjetosAPIView
-from gerenciador.views import api_status
+from gerenciador.api_status import api_status
 
 urlpatterns = [
-    path('/', api_status, name='api_status'),
+    path('', api_status, name='api_status'),
     path('admin/', admin.site.urls),
     path('api/projects', ProjetosAPIView.as_view(), name='api-projetos')
 ]
